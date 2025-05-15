@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %}UniProjekt{% endblock %}</title>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="{% url 'uniapp:home' %}" class="text-xl font-bold text-gray-800 hover:text-indigo-600 transition-colors duration-200">UniProjekt</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="{% url 'uniapp:home' %}" class="text-gray-700 hover:text-gray-900">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900">Contact Us</a>
+                    <a href="{% url 'uniapp:login' %}" class="text-gray-700 hover:text-gray-900">Login</a>
+                    <a href="{% url 'uniapp:user_registration' %}" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Signup</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
