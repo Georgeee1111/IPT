@@ -1,4 +1,5 @@
 {% extends 'lms/home_base.html' %}
+{% load static %}
 
 {% block title %}Login - UniProjekt{% endblock %}
 
@@ -11,7 +12,7 @@
             <h2 class="text-2xl mb-2">Welcome Back</h2>
         </div>
         <div class="flex items-center mb-8">
-            <span class="text-3xl font-bold">UniProjekt</span>
+            <img src="{% static 'images/UniProjektLogo.png' %}" alt="UniProjekt Logo" class="h-14 w-auto">
         </div>
     </div>
 
@@ -19,6 +20,9 @@
     <div class="w-full lg:w-1/2 bg-white flex items-center justify-center p-12">
         <div class="max-w-md w-full space-y-8">
             <div class="text-center">
+                <div class="flex justify-center mb-4">
+                    <img src="{% static 'images/UniProjektLogo.png' %}" alt="UniProjekt Logo" class="h-14 w-auto">
+                </div>
                 <h2 class="text-3xl font-bold text-gray-900">LOGIN</h2>
             </div>
 
