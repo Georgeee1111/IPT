@@ -1,4 +1,5 @@
 {% extends 'lms/home_base.html' %}
+{% load static %}
 
 {% block title %}Sign Up - UniProjekt{% endblock %}
 
@@ -7,12 +8,12 @@
     <!-- Left Panel - Gradient Background -->
     <div class="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-purple-700 via-purple-600 to-purple-500 p-12 text-white flex-col justify-between">
         <div>
-            <h1 class="text-4xl font-bold mb-4">Hello!</h1>
-            <h2 class="text-2xl mb-2">Start Your Journey</h2>
-            <p class="text-lg text-purple-100">Join our community of learners and find your perfect university.</p>
+            <h1 class="text-4xl font-bold mb-4">Welcome!</h1>
+            <h2 class="text-2xl mb-2">Join Our Community</h2>
+            <p class="text-purple-100">Create an account to start your journey with UniProjekt.</p>
         </div>
         <div class="flex items-center mb-8">
-            <span class="text-3xl font-bold">UniProjekt</span>
+            <img src="{% static 'images/UniProjektLogo.png' %}" alt="UniProjekt Logo" class="h-14 w-auto">
         </div>
     </div>
 
@@ -20,7 +21,10 @@
     <div class="w-full lg:w-1/2 bg-white flex items-center justify-center p-8">
         <div class="max-w-md w-full space-y-8">
             <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-900">SIGN UP</h2>
+                <div class="flex justify-center mb-4">
+                    <img src="{% static 'images/UniProjektLogo.png' %}" alt="UniProjekt Logo" class="h-14 w-auto">
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">Create Account</h2>
             </div>
 
             <form class="mt-8 space-y-6" method="POST">
